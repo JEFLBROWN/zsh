@@ -1,0 +1,4 @@
+alias neo='nvim'
+alias bstart='browser-sync start -f -s -w */**'
+alias lzg='lazygit'
+
