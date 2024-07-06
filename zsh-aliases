@@ -1,4 +1,16 @@
-alias neo='nvim'
+alias nv='nvim'
+
 alias bstart='browser-sync start -f -s -w */**'
 alias lzg='lazygit'
+alias nf='neofetch'
 
+alias ..='cd ..'
+alias ll='ls -l'
+
+alias apt='sudo apt'
+alias update='apt update && apt upgrade && apt autoremove'
+
+alias home='clear && cd'
+
+alias rmt='\mv -ft $@ ~/.trash/'
+alias mroot='sudo -i'
