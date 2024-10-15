@@ -1,16 +1,26 @@
 alias nv='nvim'
 
-alias bstart='browser-sync start -f -s -w */**'
-alias lzg='lazygit'
+alias lg='lazygit'
 alias nf='neofetch'
 
 alias ..='cd ..'
 alias ll='ls -l'
+alias la='ls -a'
 
+alias hm='clear && cd' # go to home directory and clear terminal
+alias cla='clear && ls -a'
+alias cl='clear && ls'
+alias c='clear'
 alias apt='sudo apt'
+
+
 alias update='apt update && apt upgrade && apt autoremove'
+alias pour='brew update && brew upgrade'
 
-alias home='clear && cd'
-
-alias rmt='\mv -ft $@ ~/.trash/'
+# alias rmt='\mv -ft $@ ~/.trash/'
 alias mroot='sudo -i'
+
+alias q='exit'
+alias so='source ~/.config/zsh/.zshrc'
+
+alias bstart='browser-sync start --s --f --w "*/**"'
