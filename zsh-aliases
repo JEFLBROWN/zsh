@@ -23,4 +23,6 @@ alias mroot='sudo -i'
 alias q='exit'
 alias so='source ~/.config/zsh/.zshrc'
 
+alias bat='batcat' #on debian based systems, the bat command conflicts with some other command so bat installs with the default command batcat.
+
 alias bstart='browser-sync start --s --f --w "*/**"'
