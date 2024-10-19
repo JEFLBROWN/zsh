@@ -1,7 +1,3 @@
-alias nv='nvim'
-alias clr='clear'
-alias bstart='browser-sync start --s --f --w "*/**"'
-
 # this is for the bare repo
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' 
 
