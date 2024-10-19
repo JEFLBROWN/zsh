@@ -13,7 +13,6 @@ alias cl='clear && ls'
 alias c='clear'
 alias apt='sudo apt'
 
-
 alias update='apt update && apt upgrade && apt autoremove'
 alias pour='brew update && brew upgrade'
 

@@ -1,22 +1,17 @@
 # this is for the bare repo
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' 
 
-# Prompt
-# PROMPT=" %F{15}%f %F{8}[%f%F{243}%~%f%F{8}]%f %F{8}➜%f "
 
-# functions
+# Sourcing files
 source $ZDOTDIR/zsh-functions
-
-# other files
 source $ZDOTDIR/zsh-aliases
 
 # Plugins
-
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
 zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
 zsh_add_plugin "hlissner/zsh-autopair"
 
-# Git Branch
+# Git Branch display in prompt
 
 # Find and set branch name var if in git repository.
 function git_branch_name()
@@ -26,7 +21,7 @@ function git_branch_name()
   then
     :
   else # this is the git branch part
-    echo ' %F{141}%f %F{8}[%f%F{243}'$branch'%F{8}]%f'
+    echo ' %F{98}%f %F{8}[%f%F{243}'$branch'%F{8}]%f'
   fi
 }
 
@@ -34,4 +29,4 @@ function git_branch_name()
 setopt prompt_subst
 
 # Config for prompt. PS1 synonym.
-prompt=' %F{12}%f %F{7}%~%f$(git_branch_name) %F{8}➜%f '
+prompt=' %F{12}%n%f %F{7}%~%f$(git_branch_name) %F{8}➜%f '
