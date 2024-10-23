@@ -1,10 +1,10 @@
 # this is for the bare repo
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' 
 
-
 # Sourcing files
 source $ZDOTDIR/zsh-functions
 source $ZDOTDIR/zsh-aliases
+# source $ZDOTDIR/zsh-prompt
 
 # Plugins
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
@@ -21,7 +21,7 @@ function git_branch_name()
   then
     :
   else # this is the git branch part
-    echo ' %F{98}%f %F{8}[%f%F{243}'$branch'%F{8}]%f'
+		echo '%F{73}'$branch'%f '
   fi
 }
 
@@ -29,4 +29,7 @@ function git_branch_name()
 setopt prompt_subst
 
 # Config for prompt. PS1 synonym.
-prompt=' %F{12}%n%f %F{7}%~%f$(git_branch_name) %F{8}➜%f '
+prompt='%F{243}%~%f $(git_branch_name)%F{214}❯ %f'
+
+# Zoxide init
+eval "$(zoxide init zsh)"
