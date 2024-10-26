@@ -21,15 +21,33 @@ function git_branch_name()
   then
     :
   else # this is the git branch part
-		echo '%F{73}'$branch'%f '
+		echo ' %F{177} '$branch '%f'
   fi
 }
 
 # Enable substitution in the prompt.
 setopt prompt_subst
 
+# Prompt parts
+usr=" %F%f%k%K{230}%F{221}"
+dir="%F{243}%2c%F{230}%f%k"
+# btm="\n%{\e[1;32m%}\U2514%{\e[0m%} %{\e[1;32m%}"
+btm="\n%{\e[1;32m%}%F{220}❯%f "
 # Config for prompt. PS1 synonym.
-prompt='%F{243}%~%f $(git_branch_name)%F{214}❯ %f'
+prompt='$(print $dir)$(git_branch_name)$(print $btm)'
 
 # Zoxide init
 eval "$(zoxide init zsh)"
+
+
+# '', -- e712
+# '',  -- e70f
+# '', -- e711
+
+#  
+#  
+#  
+# ❯
+# ⟩
+# %F{30}%n %F{126}@%f%F{30}%m
+# ⟫
