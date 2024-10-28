@@ -1,24 +1,15 @@
+# Enable substitution in the prompt.
 setopt prompt_subst
-setopt BASH_REMATCH
 
 # Prompt parts
 usr=' %F%f%k%K{230}%F{221}'
 dir='%F{243}%2c%F{230}%f%k'
-git='%F{170}$(_git_info)%f '
 btm='\n%{\e[1;32m%}%F{220}❯%f '
-check='%(?.%F{green}✔ .%F{red}𐄂 )' # Display a green prompt if the last command succeeded, or red if it failed
-
+check='%(?.%F{green}✔.%F{red}☓)' # Display a green prompt if the last command succeeded, or red if it failed
 
 # prompt put together 
-prompt='$(print $dir)$(git_info)$(print $btm)'
-
+prompt='$(print $dir)${vcs_info_msg_0_}$(print $btm)'
 
 # right side prompt
 RPROMPT='$(print $check)'
 
-left="%{\e[1;32m%}\U250C\U2500%{\e[0m%}"
-cwd="%{\e[1;35m%}%c%{\e[0m%}"
-bottom="\n%{\e[1;32m%}\U2514%{\e[0m%} %{\e[1;32m%}\U1F9CB%{\e[0m%}"
-
-# Prompt
-# export PS1=$'$(print $left) $(print $cwd)$(git_info) $(print $bottom) ''
