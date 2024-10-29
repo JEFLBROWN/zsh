@@ -5,7 +5,7 @@ setopt prompt_subst
 usr=' %F%f%k%K{230}%F{221}'
 dir='%F{243}%2c%F{230}%f%k'
 btm='\n%{\e[1;32m%}%F{220}❯%f '
-check='%(?.%F{green}✔.%F{red}☓)' # Display a green prompt if the last command succeeded, or red if it failed
+check='%(?.%F{green}✓.%F{red}☓)' # Display a green prompt if the last command succeeded, or red if it failed
 
 # prompt put together 
 prompt='$(print $dir)${vcs_info_msg_0_}$(print $btm)'
