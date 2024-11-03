@@ -3,9 +3,9 @@ setopt prompt_subst
 
 # Prompt parts
 usr=' %F%f%k%K{230}%F{221}'
-dir='%F{243}%2c%F{230}%f%k'
-btm='\n%{\e[1;32m%}%F{220}❯%f '
-check='%(?.%F{green}✓.%F{red}☓)' # Display a green prompt if the last command succeeded, or red if it failed
+dir='%F{8}%2c%F{8}%f%k'
+btm='\n%{\e[1;32m%}%F{6}❯%f '
+check='%(?.%F{10}✓.%F{1}☓)' # Display a green prompt if the last command succeeded, or red if it failed
 
 # prompt put together 
 prompt='$(print $dir)${vcs_info_msg_0_}$(print $btm)'
@@ -13,3 +13,25 @@ prompt='$(print $dir)${vcs_info_msg_0_}$(print $btm)'
 # right side prompt
 RPROMPT='$(print $check)'
 
+# %(F{0}) Black
+# %(F{1}) Red
+# %(F{2}) Green
+# %(F{3}) Yellow
+# %(F{4}) Blue
+# %(F{5}) Magenta
+# %(F{6}) Cyan
+# %(F{7}) White
+# %(F{8}) Bright Black (often gray)
+# %(F{9}) Bright Red
+# %(F{10}) Bright Green
+# %(F{11}) Bright Yellow
+# %(F{12}) Bright Blue
+# %(F{13}) Bright Magenta
+# %(F{14}) Bright Cyan
+# %(F{15}) Bright White
+#
+# Background Colors:
+#
+# Similar to foreground but with B instead of F, for example:
+# %(B{0}) Black background
+# %(B{4}) Blue background
