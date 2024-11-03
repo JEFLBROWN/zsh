@@ -7,6 +7,9 @@ alias ..='cd ..'
 alias ll='ls -l'
 alias la='ls -a'
 
+alias ls='lsd'
+alias nala='sudo nala'
+
 alias hm='clear && cd' # go to home directory and clear terminal
 alias cla='clear && ls -a'
 alias cl='clear && ls'
