@@ -6,6 +6,8 @@ usr=' %F%f%k%K{230}%F{221}'
 dir='%F{8}%2c%F{8}%f%k'
 btm='\n%{\e[1;32m%}%F{6}❯%f '
 check='%(?.%F{10}✓.%F{1}☓)' # Display a green prompt if the last command succeeded, or red if it failed
+clock='%F{yellow}$(precmd)%f'
+
 
 # prompt put together 
 prompt='$(print $dir)${vcs_info_msg_0_}$(print $btm)'
