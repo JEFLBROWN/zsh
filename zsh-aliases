@@ -7,10 +7,13 @@ alias ..='cd ..'
 alias ll='ls -l'
 alias la='ls -a'
 
+alias rmf='rm -rf'
+
+alias nz='nvim $(fzf -m --preview="bat --color=always {}")' #open -m (multiple) files of what you search for in neovim. TAB selects the files
+
 alias ls='lsd'
 alias nala='sudo nala'
 alias gdl='gallery-dl'
-
 
 alias hm='clear && cd' # go to home directory and clear terminal
 alias cla='clear && ls -a'
@@ -29,4 +32,7 @@ alias so='source ~/.config/zsh/.zshrc'
 
 alias bat='batcat' #on debian based systems, the bat command conflicts with some other command so bat installs with the default command batcat.
 
-alias bstart='browser-sync start --s --f --w "*/**"'
+# Web Dev
+alias astro='npm run dev'
+# alias 11ty='npx @11ty/eleventy --serve'
+# alias bstart='browser-sync start --s --f --w "*/**"'
